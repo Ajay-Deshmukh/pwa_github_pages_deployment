@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testmate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Navigation Bar Styles */
+        .navbar {
+            background: linear-gradient(90deg, purple, rgb(233, 13, 50));
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            height: 40px;
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-logo {
+            color: #fff;
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-family: 'Orbitron', sans-serif;
+            margin-left: 5vw;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-item {
+            margin: 0 1rem;
+        }
+
+        .navbar-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .navbar-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Existing Home Styles */
+        .home {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding-top: 60px; /* Added to account for fixed navbar */
+        }
+
+        .welcome {
+            position: relative;
+            background: url('./background.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            margin-top: -60px; /* Adjust to remove gap from navbar padding */
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6); /* Darker overlay to match image */
+            padding: 3rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .welcome h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .welcome p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .get-started-button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .get-started-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Adjust body and home container */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .home {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="navbar-logo">
+                Testmate
+            </a>
+            <ul class="navbar-menu">
+                <li class="navbar-item">
+                    <a href="/" class="navbar-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/about" class="navbar-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/services" class="navbar-link">Services</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/contact" class="navbar-link">Contact</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="/login" class="navbar-link">Sign in</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Existing Home Content -->
+    <div class="home">
+        <header class="welcome">
+            <div class="overlay">
+                <h1>Welcome to Testmate</h1>
+                <p>Your one-stop solution for Gate exam preparation</p>
+                <a href="/login" class="get-started-button">Get Started</a>
+            </div>
+        </header>
+
+        <section class="about">
+            <h2>About Testmate</h2>
+            <p>
+                Testmate is an online platform designed to help students prepare for gate exams.
+                We provide all the resources you need to succeed!
+            </p>
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-book feature-icon"></i>
+                    <h3>Comprehensive Study Materials</h3>
+                    <p>Access curated notes and guides from top scorers to master every topic.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Practice Tests & Analytics</h3>
+                    <p>Take practice exams and get detailed performance analytics to track your progress.</p>
+                </div>
+
+                <div class="feature-card">
+                    <i class="fas fa-graduation-cap feature-icon"></i>
+                    <h3>Expert Tips</h3>
+                    <p>Get insights and strategies from experts who've aced the GATE exam.</p>
+                </div>
+            </div>
+            <a href="/features" class="learn-more-button">Learn More</a>
+        </section>
+    </div>
+</body>
+</html>
